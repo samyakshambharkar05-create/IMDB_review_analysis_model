@@ -26,7 +26,7 @@ def text_preprocessing(text):
     text = re.sub(r'[^a-zA-Z]', ' ', text).lower()
     # Tokenize and remove stop words and lemmatize
     words = text.split()
-    words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words and w.isalnum()]
+    words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words and word.isalnum()]
     return words
 
 # Load the model and vectorizer
